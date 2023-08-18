@@ -375,25 +375,25 @@ span {
     /* Adjust the maximum width as needed */
 }
 
-.sender-name-time {
-    justify-content: flex-end;
-}
+
 
 .sender {
-
+    /* flex-direction: row-reverse; */
     justify-content: flex-end;
     align-items: flex-start;
     max-width: 50%;
-    margin-left: auto;
+    margin-left:auto;
+
    
 
 }
 
-.receiver {
 
+.receiver {
     justify-content: flex-start;
     align-items: flex-start;
     max-width: 50%;
+    margin-right: auto;
 
 }
 
@@ -414,7 +414,9 @@ span {
     border-bottom-left-radius: 1em;
     border-top-left-radius: 1em;
 }
-
+.sender-name-time {
+    justify-content: flex-end;
+}
 
 
 .message-head-content {
