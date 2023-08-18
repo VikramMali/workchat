@@ -378,8 +378,8 @@ span {
 
 
 .sender {
-    /* flex-direction: row-reverse; */
-    justify-content: flex-end;
+    flex-direction: row-reverse;
+    justify-content: end;
     align-items: flex-start;
     max-width: 50%;
     margin-left:auto;
