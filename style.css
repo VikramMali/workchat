@@ -623,7 +623,7 @@ span {
 
 .textStyle {
     position: absolute;
-    max-width: 55%;
+    bottom: 4em;
     display: flex;
     flex-wrap: wrap;
     gap: 1em;

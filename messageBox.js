@@ -97,13 +97,12 @@ class MessageBox extends HTMLElement {
 
                                 </div>
                             </div>
-              <span class="message-owner"></span>
-              <span class="message-time"></span>
-              </div>
-              <span class="messagetext"></span>
-          </div>
-        </div>
-      `;
+                            <span class="message-owner"></span>
+                            <span class="message-time"></span>
+                            </div>
+                            <span class="messagetext"></span>
+                        </div>
+                      </div>`;
 
     const shadowRoot = this.attachShadow({ mode: "open" });
     shadowRoot.appendChild(template.content.cloneNode(true));
