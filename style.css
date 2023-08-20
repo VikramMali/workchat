@@ -482,11 +482,14 @@ span {
 .three-option-visible {
     display: flex;
     gap: 0.5em;
-    /* opacity: 0; */
+    opacity: 0;
 
 }
 
 .receiver:hover .three-option-visible {
+    opacity: 1;
+}
+.sender:hover .three-option-visible {
     opacity: 1;
 }
 
