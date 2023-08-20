@@ -416,11 +416,16 @@ span {
 }
 
 
-.message-head-content {
+.receiver-zone{
     display: flex;
     position: relative;
     justify-content: space-between;
     align-items: center;
+}
+.sender-zone{
+   display: flex;
+   flex-direction: row-reverse;
+   
 }
 
 .forward-share-container {
@@ -434,8 +439,8 @@ span {
     display: flex;
     cursor: pointer;
     margin: auto;
-
-    /* display: none; */
+/* 
+    display: none; */
 
     margin-left: -5em;
     margin-top: -0.5em;
@@ -477,7 +482,7 @@ span {
 .three-option-visible {
     display: flex;
     gap: 0.5em;
-    opacity: 0;
+    /* opacity: 0; */
 
 }
 
