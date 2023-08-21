@@ -16,8 +16,8 @@ class MessageBox extends HTMLElement {
               <span class="message-owner "></span>
               <span class="message-time "></span>
               </div>
-              <div class="forward-share-container">
-                <div class="forward-share-thread">
+              <div class="message-toolbar-container">
+                <div class="message-toolbar">
                     <div class="three-option-visible">
                         <svg class="reply" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                             fill="currentColor" class="bi bi-reply" viewBox="0 0 16 16">
