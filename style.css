@@ -440,7 +440,7 @@ span {
     position: absolute;
     display: flex;
     cursor: pointer;
-    margin: auto;
+    
  /* display: none; */
 
     /* margin-left: -5em;
@@ -501,7 +501,7 @@ span {
     opacity: 1;
 }
 
-.forward-share-container:hover .message-options {
+.message-toolbar-container:hover .message-options {
     opacity: 1;
 
 }
