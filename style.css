@@ -432,15 +432,13 @@ span {
 
 .message-toolbar-container {
     position: relative;
-   
-
 }
 
 .message-toolbar {
  
     display: flex;
     cursor: pointer;
-display: none;
+    display: none;
     gap: 0.6em;
 
 
@@ -482,7 +480,6 @@ display: none;
     /* flex-wrap: wrap; */
 
 }
-
 
 
 .receiver:hover .message-toolbar {
