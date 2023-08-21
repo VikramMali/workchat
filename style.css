@@ -425,29 +425,34 @@ span {
 .sender-zone{
    display: flex;
    flex-direction: row-reverse;
+   align-items: center;
+   
    
 }
 
-.forward-share-container {
+.message-toolbar-container {
     position: relative;
 
 }
 
-.forward-share-thread {
+.message-toolbar {
     width: 50%;
     position: absolute;
     display: flex;
     cursor: pointer;
     margin: auto;
-/* 
-    display: none; */
+ /* display: none; */
 
-    margin-left: -5em;
-    margin-top: -0.5em;
+    /* margin-left: -5em;
+    margin-top: -0.5em; */
 
     gap: 0.6em;
 
 
+}
+.sender .message-toolbar{
+    flex-direction: row-reverse;
+   
 }
 
 
@@ -469,6 +474,9 @@ span {
     border: 0.5px solid var(--border-color);
     z-index: 9999;
 
+}
+.message-options  span{
+    cursor: pointer;
 }
 
 .message-options-elements {
