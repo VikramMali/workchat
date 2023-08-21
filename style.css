@@ -426,26 +426,21 @@ span {
    display: flex;
    flex-direction: row-reverse;
    align-items: center;
-   
+   justify-content: space-between;
    
 }
 
 .message-toolbar-container {
     position: relative;
+   
 
 }
 
 .message-toolbar {
-    width: 50%;
-    position: absolute;
+ 
     display: flex;
     cursor: pointer;
-    
- /* display: none; */
-
-    /* margin-left: -5em;
-    margin-top: -0.5em; */
-
+display: none;
     gap: 0.6em;
 
 
@@ -467,12 +462,13 @@ span {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    opacity: 0;
+    display: none;
     gap: 1em;
     padding: 1em 1em;
     border-radius: 0.5em;
     border: 0.5px solid var(--border-color);
     z-index: 9999;
+
 
 }
 .message-options  span{
@@ -487,22 +483,17 @@ span {
 
 }
 
-.three-option-visible {
+
+
+.receiver:hover .message-toolbar {
     display: flex;
-    gap: 0.5em;
-    opacity: 0;
-
 }
-
-.receiver:hover .three-option-visible {
-    opacity: 1;
-}
-.sender:hover .three-option-visible {
-    opacity: 1;
+.sender:hover .message-toolbar  {
+   display: flex;
 }
 
 .message-toolbar-container:hover .message-options {
-    opacity: 1;
+    display: flex;
 
 }
 
