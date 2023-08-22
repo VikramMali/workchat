@@ -168,7 +168,7 @@ img {
     scale: 1.1;
 }
 
-/* image-cropper-css-step 2 page */
+/* ========================================image-cropper-css-step 2 page============================================== */
 .cropper-image-container {
     flex: 1;
     display: flex;
@@ -232,8 +232,10 @@ img {
 }
 
 .crop-container img {
-    max-width: 100%;
+    max-width: 60%;
+    max-height: 60%;
     height: auto;
+    width: auto;
 }
 
 .crop-container button {
@@ -253,6 +255,12 @@ img {
     transition: all ease 2s;
     color: var(--text-color);
     cursor: pointer;
+
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    margin-top: 10px; 
+    z-index: 1; 
 }
 
 #imageInput {
@@ -293,6 +301,9 @@ img {
     .crop-container {
         max-width: 80%;
         font-size: 14px;
+    }
+    #saveCrop {
+        margin-top: 0; 
     }
 }
 
