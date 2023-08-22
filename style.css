@@ -197,12 +197,13 @@ img {
     width: 300px;
     height: 300px;
     border-radius: 0.5em;
-   
+
 }
-.button-continue{
+
+.button-continue {
     display: flex;
     gap: 1em;
-  
+
 }
 
 
@@ -277,15 +278,18 @@ img {
         padding-right: 1em;
         max-width: calc(100% - 2em);
     }
-    .img-box img{
+
+    .img-box img {
         width: 250px;
         height: 250px;
     }
-    .button-continue{
-       flex-direction: column;
 
-      
+    .button-continue {
+        flex-direction: column;
+
+
     }
+
     .crop-container {
         max-width: 80%;
         font-size: 14px;
@@ -555,8 +559,8 @@ span {
 }
 
 .message-toolbar {
-   
-   position: relative;
+
+    position: relative;
     display: flex;
     cursor: pointer;
     display: none;
@@ -585,13 +589,14 @@ span {
 
 }
 
-.sender .message-options{
-    top:0;
+.sender .message-options {
+    top: 0;
     right: 100%;
 }
-.receiver .message-options{
+
+.receiver .message-options {
     top: 0;
-    left:100%;
+    left: 100%;
 }
 
 .message-options span {
@@ -615,25 +620,18 @@ span {
     display: flex;
 }
 
-.three-dots:focus{
+.three-dots {
     outline: none;
 }
 
-.three-dots:focus + .message-options{
+.three-dots:focus+.message-options {
     display: flex;
+
 }
-
-
-
-
-
-
 
 .message-options svg {
     cursor: pointer;
 }
-
-
 
 @media (max-width: 1200px) {
 
