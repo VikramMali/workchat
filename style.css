@@ -551,14 +551,16 @@ span {
     position: relative;
 
 
+
 }
 
 .message-toolbar {
-
+   
+   position: relative;
     display: flex;
     cursor: pointer;
     display: none;
-    gap: 0.6em;
+    gap: 0.5em;
 
 }
 
@@ -583,6 +585,15 @@ span {
 
 }
 
+.sender .message-options{
+    top:0;
+    right: 100%;
+}
+.receiver .message-options{
+    top: 0;
+    left:100%;
+}
+
 .message-options span {
     cursor: pointer;
 }
@@ -604,9 +615,12 @@ span {
     display: flex;
 }
 
-.message-toolbar-container:hover .message-options {
-    display: flex;
+.three-dots:focus{
+    outline: none;
+}
 
+.three-dots:focus + .message-options{
+    display: flex;
 }
 
 
