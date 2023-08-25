@@ -459,9 +459,6 @@ span {
 .message-container {
     flex: 1;
     overflow-y: auto;
-
-
-
 }
 .menu-sidebar{
     position: absolute;
