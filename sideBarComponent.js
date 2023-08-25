@@ -9,7 +9,7 @@ class SideBar extends HTMLElement {
         <link rel="stylesheet" href="style.css">
         
         <div class="container1">
-        <div class="menu-sidebar" style="padding: 0.5em;">
+        <div class="menu-sidebar" style="padding: 0.5em; cursor:pointer">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
             viewBox="0 0 16 16">
             <path fill-rule="evenodd"
@@ -148,7 +148,11 @@ class SideBar extends HTMLElement {
             </div>
         </div>
     </div>
-    </div> `;
+    </div>
+
+    
+    
+    `;
 
         const shadowRoot = this.attachShadow({ mode: "open" });
         shadowRoot.appendChild(template.content.cloneNode(true));
@@ -167,6 +171,7 @@ class SideBar extends HTMLElement {
               isMenuOpen = true;
           }
       });
+
 
     }
 }
