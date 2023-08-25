@@ -354,6 +354,7 @@ img {
     justify-content: space-between;
     align-items: center;
     gap: 2em;
+    z-index: 9999;
 
 }
 
@@ -427,11 +428,11 @@ span {
 
 
 .sidebar {
+    position: sticky;
     padding: 0.6em;
     flex: 0.1;
     background-color: var(--sidebar);
     min-width: 200px;
-    border-top: 0.05px solid var(--border-color);
     border-right: 0.05px solid var(--border-color);
     z-index: 999;
 }
@@ -489,6 +490,7 @@ span {
 
     .menu-sidebar {
         display: block;
+      
     }
 }
 
@@ -1188,50 +1190,14 @@ a {
 /*============ profile============ */
 
 .container-prof {
-    width: 100%;
-    margin: auto;
+   flex:1;
+   margin: auto;
 }
 
-.navbar-prof {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em;
-    width: calc(100% - 2em);
-}
 
-.left {
-    display: flex;
-}
-
-.logo-prof img {
-    width: 80px;
-}
-
-.right {
-    display: flex;
-    gap: 1em;
-}
-
-.righticons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.righticons:nth-child(3) {
-    gap: 1em;
-}
-
-.righticons img {
-    /* height: 50px; */
-    width: 40px;
-}
 
 .editprofile-container {
-    width: 60%;
+    width: 80%;
     margin: auto;
     max-width: 80%;
     display: flex;
@@ -1271,6 +1237,7 @@ input[type="number"]::-webkit-outer-spin-button {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row-reverse;
     /* justify-content: space-around; */
     gap: 3em;
     padding: 2em;
