@@ -26,26 +26,6 @@ WorkSetu facilitates real-time messaging, enabling instantaneous communication b
 
 WorkSetu is built with a responsive design, making it accessible and functional across various devices and screen sizes. Whether on a desktop computer, tablet, or smartphone, users can enjoy a consistent and optimized experience.
 
-## Getting Started
-
-To deploy and run WorkSetu locally, follow these steps:
-
-1. Clone this repository: `git clone https://github.com/VikramMali/workchat.git`
-2. Navigate to the project directory: `cd workchat`
-3. Open the `index.html` file in your preferred web browser.
-4. Start exploring the features of WorkSetu and engage in AI-assisted conversations.
-
-## Contributing
-
-We welcome contributions to enhance the functionality and features of WorkSetu. To contribute:
-
-1. Fork this repository and clone it to your local machine.
-2. Create a new branch: `git checkout -b main`
-3. Make your modifications and improvements.
-4. Commit your changes: `git commit -m "Add your descriptive commit message"`
-5. Push to the branch: `git push origin main`
-6. Open a Pull Request in this repository.
-
 ---
 
 Discover the power of seamless communication with AI integration. Experience WorkSetu today and revolutionize the way you collaborate in a professional setting.
