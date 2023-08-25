@@ -8,14 +8,10 @@ class NavBar extends HTMLElement {
         <link rel="stylesheet" href="style.css">
         
         <div class="nav" style="border-bottom:0.5px solid var(--border-color)">
-            <div style="display: flex;align-items: center;gap: 1em;">
-            <div class="menu-sidebar" style="padding: 0.5em;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
-                viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-            </svg>
-        </div>
+            <div style="display: flex;align-items: center;gap: 4em;">
+
+                <div></div>
+
                 <!-- add extra logo -->
                 <div class="logo">
 
@@ -42,6 +38,10 @@ class NavBar extends HTMLElement {
   
       const shadowRoot = this.attachShadow({ mode: "open" });
       shadowRoot.appendChild(template.content.cloneNode(true));
+
+
+  
+
     }
   }
   

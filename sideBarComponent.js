@@ -1,15 +1,24 @@
 class SideBar extends HTMLElement {
     constructor() {
-      super();
-  
-      const template = document.createElement("template");
-      template.innerHTML = `
+        super();
+
+        const template = document.createElement("template");
+        template.innerHTML = `
 
     
         <link rel="stylesheet" href="style.css">
+        
         <div class="container1">
+        <div class="menu-sidebar" style="padding: 0.5em;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+             </svg>
+    </div>
+       
         <div class="sidebar">
-    
+
         <div class="content" style="  display: flex; flex-direction:column; ">
             <div class="top" style="display: flex; justify-content:space-between; align-items:center;">
                 <div class="row">
@@ -139,51 +148,28 @@ class SideBar extends HTMLElement {
             </div>
         </div>
     </div>
-    </div>
-    <script src="popupscript.js"></script>
-      `;
-  
-      const shadowRoot = this.attachShadow({ mode: "open" });
-      shadowRoot.appendChild(template.content.cloneNode(true));
+    </div> `;
+
+        const shadowRoot = this.attachShadow({ mode: "open" });
+        shadowRoot.appendChild(template.content.cloneNode(true));
+
         
-      // Access the script element
-        const script = shadowRoot.querySelector("script");
-
-        // Event listener for script load
-        script.addEventListener("load", () => {
-        // This code will run when the script is fully loaded
-        // You can access and manipulate elements inside the script here
-        console.log("Script loaded");
-        });
-
-
-
-
- 
       const menu = shadowRoot.querySelector(".menu-sidebar");
       const sideBar = shadowRoot.querySelector(".sidebar");
       let isMenuOpen = false;
-  
+
       menu.addEventListener("click", () => {
-        if (isMenuOpen) {
-          sideBar.style.display = "none";
-          isMenuOpen = false;
-        } else {
-          sideBar.style.display = "block";
-          isMenuOpen = true;
-        }
+          if (isMenuOpen) {
+              sideBar.style.display = "none";
+              isMenuOpen = false;
+          } else {
+              sideBar.style.display = "block";
+              isMenuOpen = true;
+          }
       });
 
-      
-
-
-  
-      
-  
-      window.addEventListener("resize", handleViewportChange);
-      window.addEventListener("DOMContentLoaded", handleViewportChange);
     }
-  }
-  
-  customElements.define("side-bar", SideBar);
-  
+}
+
+customElements.define("side-bar", SideBar);
+
