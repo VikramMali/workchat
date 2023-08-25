@@ -15,7 +15,7 @@ class NavBar extends HTMLElement {
                 <!-- add extra logo -->
                 <div class="logo">
 
-                    <img class="logo-main" src="wlogo.png" alt="">
+                    <img class="logo-main" src="img/wlogo.png" alt="">
                     <span class="text w-title">worksetu</span>
                 </div>
             </div>
@@ -34,7 +34,7 @@ class NavBar extends HTMLElement {
                     </svg>
                 </div>
                 <div class="profile-image-nav">
-                    <img src="sender.png" alt="Me"
+                    <img src="img/sender.png" alt="Me"
                         style=" width: 40px; height:40px; margin-right:2.5em; border-radius:0.5em; cursor:pointer;">
                 </div>
             </div>

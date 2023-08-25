@@ -142,7 +142,7 @@ class SideBar extends HTMLElement {
             </div>
             <div class="row" style="gap:2em">
                 <div class="row add-channel" style="cursor:pointer;">
-                    <img style="width: 20px; height:20px" src="chatgpt-4.png" alt="">
+                    <img style="width: 20px; height:20px" src="img/chatgpt-4.png" alt="">
                     <span>Reply using ChatGpt</span>
                 </div>
             </div>
