@@ -370,7 +370,7 @@ z-index: 5;
     border-color: var(--sub-text-color);
     color: var(--text-color);
     border: 1px solid var(--sub-text-color);
-    padding: 4px 15px;
+    padding: 6px 15px;
     font-size: 1em;
     
 }
