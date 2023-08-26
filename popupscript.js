@@ -76,36 +76,7 @@ signOutButton.addEventListener('click', function (event) {
 });
 
 
-// profile pop up script===========================================================================
 
-// JavaScript
-const imgElement = document.querySelector('.profile-image-nav');
-const popupElement = document.querySelector('.profile-popup');
-
-// Function to show the pop-up
-function showPopups() {
-    popupElement.style.display = 'block';
-}
-
-// Function to hide the pop-up
-function hidePopups() {
-    popupElement.style.display = 'none';
-}
-
-imgElement.addEventListener('click', function (event) {
-    if (popupElement.style.display === 'block') {
-        hidePopups();
-    } else {
-        showPopups();
-    }
-});
-
-// Event listener to hide the pop-up when clicking outside
-document.addEventListener('click', function (event) {
-    if (!imgElement.contains(event.target) && !popupElement.contains(event.target)) {
-        hidePopups();
-    }
-});
 
 
 //invite people===============================================================================================

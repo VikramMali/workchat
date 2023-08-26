@@ -39,8 +39,6 @@
                         </label>
                         <input type="file" id="imageInput" accept="image/*">
 
-                        <button class="button">Continue</button>
-
                     </div>
                 </div>
 
@@ -61,7 +59,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
     <!--dark mode script -->
     <script src="components/darkmode.js"></script>
-    <script src="script.js"></script>
+    
 </body>
 
 </html>
@@ -110,7 +108,7 @@
             imageInput.value = ''; // Clear the selected file
             originalImage.src = ''; // Clear the displayed image
             if (cropper) {
-                cropper.destroy(); // Destroy the cropper instance
+                cropper.destroy(); 
             }
         });
     });
