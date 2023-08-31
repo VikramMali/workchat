@@ -913,6 +913,7 @@ span {
 }
 
 .profile-popup {
+   
     width: 250px;
     height: 250px;
     padding: 2em;
@@ -923,6 +924,7 @@ span {
     position: absolute;
     top: 4%;
     right: 0;
+    z-index: 9999;
     display: none;
 
 }

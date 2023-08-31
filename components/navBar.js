@@ -41,7 +41,7 @@ class NavBar extends HTMLElement {
             </div>
       
         <!-- profile-popup -->
-        <div class="profile-popup">
+        <div class="profile-popup" >
             <div class="column">
                 <div class="row">
                     <img class="img" src="img/sender.png" alt="">
@@ -77,34 +77,21 @@ class NavBar extends HTMLElement {
     const shadowRoot = this.attachShadow({ mode: "open" });
     shadowRoot.appendChild(template.content.cloneNode(true));
     this.popupElement = shadowRoot.querySelector(".profile-popup");
+    this.imgElement = shadowRoot.querySelector(".profile-image-nav");
   }
 
   connectedCallback() {
-    const imgElement = this.shadowRoot.querySelector('.profile-image-nav');
-    const popupElement = this.shadowRoot.querySelector('.profile-popup');
-
-    function showPopups() {
-      popupElement.style.display = 'block';
-    }
-
-    function hidePopups() {
-      popupElement.style.display = 'none';
-    }
-
-    imgElement.addEventListener('click', function (event) {
-      if (popupElement.style.display === 'block') {
-        hidePopups();
-      } else {
-        showPopups();
-      }
+    this.imgElement.addEventListener("click", () => {
+      this.popupElement.style.display = "block";
     });
 
-    document.addEventListener('click', function (event) {
-      if (!imgElement.contains(event.target) && !popupElement.contains(event.target)) {
-        hidePopups();
+    document.addEventListener("click", (event) => {
+      if (!this.contains(event.target)) {
+        this.popupElement.style.display = "none";
       }
     });
-}
+  
+  }
 }
 
 customElements.define("nav-bar", NavBar);

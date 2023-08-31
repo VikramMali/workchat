@@ -1,9 +1,9 @@
 class SideBar extends HTMLElement {
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        const template = document.createElement("template");
-        template.innerHTML = `
+    const template = document.createElement("template");
+    template.innerHTML = `
 
     
         <link rel="stylesheet" href="style.css">
@@ -154,27 +154,25 @@ class SideBar extends HTMLElement {
     
     `;
 
-        const shadowRoot = this.attachShadow({ mode: "open" });
-        shadowRoot.appendChild(template.content.cloneNode(true));
+    const shadowRoot = this.attachShadow({ mode: "open" });
+    shadowRoot.appendChild(template.content.cloneNode(true));
 
-        
-      const menu = shadowRoot.querySelector(".menu-sidebar");
-      const sideBar = shadowRoot.querySelector(".sidebar");
-      let isMenuOpen = false;
+    const menu = shadowRoot.querySelector(".menu-sidebar");
+    const sideBar = shadowRoot.querySelector(".sidebar");
+    let isMenuOpen = false;
 
-      menu.addEventListener("click", () => {
-          if (isMenuOpen) {
-              sideBar.style.display = "none";
-              isMenuOpen = false;
-          } else {
-              sideBar.style.display = "block";
-              isMenuOpen = true;
-          }
-      });
+    menu.addEventListener("click", () => {
+      if (isMenuOpen) {
+        sideBar.style.display = "none";
+        isMenuOpen = false;
+      } else {
+        sideBar.style.display = "block";
+        isMenuOpen = true;
+      }
+    });
 
-
-    }
+    
+  }
 }
 
 customElements.define("side-bar", SideBar);
-
