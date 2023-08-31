@@ -73,7 +73,7 @@ class NavBar extends HTMLElement {
                 </div>
             </div>
         </div> `;
-
+                                        
     const shadowRoot = this.attachShadow({ mode: "open" });
     shadowRoot.appendChild(template.content.cloneNode(true));
     this.popupElement = shadowRoot.querySelector(".profile-popup");

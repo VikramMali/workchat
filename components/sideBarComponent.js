@@ -150,12 +150,45 @@ class SideBar extends HTMLElement {
     </div>
     </div>
 
+    <div class="your-slack popup" id="yourSlackPopup">
+        <div class="column">
+            <div class="row">
+                <img class="img" src="img/sender.png" alt=""
+                    style=" width: 40px; height:40px; border-radius:0.5em; cursor:pointer;">
+                <div class="column" style="gap:2px">
+                    <span style="font-size: 1em; font-weight:600;">Your Worksetu</span>
+                    <span>worksetu-tdq3097.slack.com</span>
+                </div>
+            </div>
+            <div class="mid-content">
+                <div class="column" style="border-bottom: 1px solid grey; padding:10px" ;>
+                    <span class="invite" style="cursor: pointer;">Invite people to your slack</span>
+                    <span class="create-pop" style="cursor: pointer;">Create channel</span>
+                </div>
+                <div class="column" style="border-bottom: 1px solid grey; padding:10px " ;>
+                    <span class="setting-and-admin" style="cursor: pointer;">Setting and administration</span>
+
+                </div>
+                <div class="column" style="border-bottom: 1px solid grey; padding:10px" ;>
+                    <span class="work-pop-up" style="cursor: pointer;">Add workspace</span>
+                    <span class="switch-button" style="cursor: pointer;">Switch workspace</span>
+                </div>
+            </div>
+            <div>
+                <button class="button" style="width: 10px; font-size:16px">Sign out</button>
+            </div>
+        </div>
+
+    </div>
+
     
     
     `;
 
     const shadowRoot = this.attachShadow({ mode: "open" });
     shadowRoot.appendChild(template.content.cloneNode(true));
+
+
 
     const menu = shadowRoot.querySelector(".menu-sidebar");
     const sideBar = shadowRoot.querySelector(".sidebar");
@@ -171,7 +204,28 @@ class SideBar extends HTMLElement {
       }
     });
 
-    
+    // All pop up code here
+    this.yourSlackButton = shadowRoot.querySelector("#yourSlackButton");
+    this.yourSlackPopup = shadowRoot.querySelector("#yourSlackPopup");
+    this.signOutButton = shadowRoot.querySelector(".button");
+
+  }
+
+
+   
+  connectedCallback(){
+    this.yourSlackButton.addEventListener("click", () => {
+        this.yourSlackPopup.style.display = "block";
+      });
+  
+      document.addEventListener("click", (event) => {
+        if (!this.contains(event.target)) {
+          this.yourSlackPopup.style.display = "none";
+        }
+      });
+      this.signOutButton.addEventListener("click", () => {
+        this.yourSlackPopup.style.display = "none";
+      });
   }
 }
 
