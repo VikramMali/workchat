@@ -113,7 +113,8 @@ img {
     max-width: calc(100% - 2em);
     margin-top: 10vh;
     border: 0.5px solid var(--border-color);
-
+    background-color: rgb(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     /* box-shadow: var(--box-shadow); */
     border-radius: 1em;
     padding: 3em 2em;
@@ -298,9 +299,8 @@ height: 60vh;
 
     .container {
         margin: auto;
-        padding-left: 1em;
-        padding-right: 1em;
-        max-width: calc(100% - 2em);
+       
+        max-width: calc(100% - 3em);
     }
 
     .img-box img {
