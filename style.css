@@ -1365,10 +1365,16 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 @media screen and (max-width:768px) {
+    .editprof{
+        padding: 0em;
+    }
 
     .editprofile-container {
-        width: 90%;
-
+        padding: 1.5em;
+       width: calc(100% - 3em);
+    }
+    .profilepage-main{
+        padding: 0em;
     }
 
     .leftside img {
