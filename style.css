@@ -96,7 +96,15 @@ img {
     max-width: 1140px;
 
 }
-
+.index-video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    top: 0;
+    z-index: -99; 
+    position: absolute;
+    opacity: 1;
+}
 .center-form {
     margin: auto;
     display: flex;
@@ -104,7 +112,9 @@ img {
     width: 400px;
     max-width: calc(100% - 2em);
     margin-top: 10vh;
-    box-shadow: var(--box-shadow);
+    border: 0.5px solid var(--border-color);
+
+    /* box-shadow: var(--box-shadow); */
     border-radius: 1em;
     padding: 3em 2em;
 }
@@ -216,7 +226,7 @@ img {
 
 
 .crop-popup {
-    /* display: none; */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
