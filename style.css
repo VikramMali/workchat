@@ -145,10 +145,16 @@ img {
     border: 2px solid var(--primary-color);
 }
 
+.two-buttonss{
+    display: flex;
+    justify-content: space-between;
+  
+}
 .button {
+   
     color: var(--primary-text-color);
     background: var(--primary-color);
-    font-size: 1.5rem;
+    font-size: 1.4em;
     font-weight: 400;
     letter-spacing: 1px;
     cursor: pointer;
@@ -191,7 +197,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 0.5px solid var(--border-color);
+    /* border: 0.5px solid var(--border-color); */
     border-radius: 1em;
 }
 

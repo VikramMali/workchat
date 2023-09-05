@@ -13,45 +13,19 @@
 
 <body>
     <div class="container" style="display: flex; flex-direction: column; gap: 1em;">
-        <!-- <a href="step1.html" class="steps_heading">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left"
-                viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
-            </svg>
-            Step 2 of 4
-        </a> -->
-        <div style="display: flex;align-items: center;flex-wrap: wrap;gap: 1em;"" >
-            <div style="flex: 1;display: flex;flex-direction: column;align-self: end; width:100%">
+        <div style="display: flex;align-items: center;flex-wrap: wrap;gap: 1em;">
+            <div style="flex:1;display: flex;flex-direction: column;align-self: end; ">
                 <h1>What's your name?</h1>
                 <p>Adding your name and profile photo helps your teammates to recognise and connect with you more
                     easily.</p>
                 <input class="input" placeholder="Enter your good name" />
-                <a class="button" href="otp.html" style="width: auto;"> Next</a>
+                <a class="button" href="otp.html" style="width: auto;">Next</a>
             </div>
-            <div class="cropper-image-container">
-
-                <div class="img-box">
-                    <img src="img/receiver.jpeg" alt="" id="originalImage">
-                    <div class="button-continue">
-                        <label for="imageInput" class="button">
-                            <span>Upload photo</span>
-                        </label>
-                        <input type="file" id="imageInput" accept="image/*">
-
-                    </div>
-                </div>
-
-                <div class="crop-popup" id="cropPopup">
-                    <div class="crop-container">
-                        <img src="" alt="" id="cropImage">
-                        <div class="two-button">
-                            <button class="button" id="saveCrop">Save</button>
-                            <button class="button" id="cancelCrop">Cancel</button>
-                        </div>
-                    </div>
-                </div>
+            <div class="photoz" style="flex:1; border: 0.5px solid var(--border-color);  border-radius: 1em;">
+                <photo-cropper></photo-cropper>
             </div>
+
+
         </div>
 
     </div>
@@ -59,58 +33,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
     <!--dark mode script -->
     <script src="components/darkmode.js"></script>
+    <script src="components/photo-cropper.js"></script>
 
 </body>
 
 </html>
 
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const imageInput = document.getElementById("imageInput");
-        const originalImage = document.getElementById("originalImage");
-        const cropPopup = document.getElementById("cropPopup");
-        const cropImage = document.getElementById("cropImage");
-        const saveCropButton = document.getElementById("saveCrop");
-        const cancelCrop = document.getElementById("cancelCrop");
-        let cropper;
 
-        imageInput.addEventListener("change", () => {
-            if (imageInput.files && imageInput.files[0]) {
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    originalImage.src = reader.result;
-                    cropPopup.style.display = "flex";
-                    if (cropper) {
-                        cropper.destroy();
-                    }
-                    cropper = new Cropper(cropImage, {
-                        aspectRatio: 1,
-                        viewMode: 1,
-                    });
-                    cropper.replace(reader.result);
-                };
-                reader.readAsDataURL(imageInput.files[0]);
-            }
-        });
 
-        saveCropButton.addEventListener("click", () => {
-            const croppedCanvas = cropper.getCroppedCanvas({
-                width: 300, // Set default crop width
-                height: 300 // Set default crop height
-            });
-            const croppedImage = croppedCanvas.toDataURL();
-            originalImage.src = croppedImage;
-            cropPopup.style.display = "none";
-        });
-        cancelCrop.addEventListener("click", () => {
-            cropPopup.style.display = "none";
-            imageInput.value = ''; // Clear the selected file
-            originalImage.src = ''; // Clear the displayed image
-            if (cropper) {
-                cropper.destroy(); 
-            }
-        });
-    });
 
-</script>
+
