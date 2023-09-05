@@ -48,6 +48,7 @@ class MessageBox extends HTMLElement {
 
                             <!-- option when click three dot in message -->
                             <div class="message-options">
+                         
                                 <div class="row message-options-elements">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                         fill="currentColor" class="bi bi-reply" viewBox="0 0 16 16">
@@ -56,6 +57,7 @@ class MessageBox extends HTMLElement {
                                     </svg>
                                     <span>Reply</span>
                                 </div>
+                         
                                 <div class="row message-options-elements">
             
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -108,49 +110,37 @@ class MessageBox extends HTMLElement {
         });
 
         shadowRoot.appendChild(template.content.cloneNode(true));
-        const messageOptionsContainer = this.shadowRoot.querySelector(".message-options");
+        const threeDots = this.shadowRoot.querySelector(".three-dots");
+        const messageOptions = this.shadowRoot.querySelector(".message-options");
         const threadContainer = document.getElementById("threads");
         const closeThreadButton = threadContainer.querySelector(".close-thread");
         const threadOpenButtons = this.shadowRoot.querySelectorAll(".thread-open");
-        const threadButton = messageOptionsContainer.querySelector("#thread-button");
+        const threadButton = this.shadowRoot.querySelector("#thread-button");
 
-        messageOptionsContainer.addEventListener("click", () => {
-            console.log("hiiii");
+        threeDots.addEventListener("click", () => {
+            console.log("ok-fo");
+            messageOptions.style.display = "flex";
+
         });
+
+   
+   
+
+
 
         threadButton.addEventListener("click", () => {
-            const threadContainer = document.getElementById("threads");
             threadContainer.style.display = "flex";
-            console.log("Thread button clicked");
         });
-
-        // const threedotthread = this.shadowRoot.querySelector(".open-threads");
-
-        // threedotthread.addEventListener("click", () => {
-        //     threadContainer.style.display = "flex";
-        //     console.log("work");
-        // });
-
-        // shadowRoot.addEventListener("click", (event) => {
-        //     if (event.target.classList.contains("open-threads")) {
-        //         threadContainer.style.display = "flex";
-        //         console.log("Thread button clicked");
-        //     }
-        // });
-
-        threadOpenButtons.forEach( e => {
+        threadOpenButtons.forEach(e => {
             e.addEventListener("click", () => {
                 threadContainer.style.display = "flex";
             });
         });
-     
-
         closeThreadButton.addEventListener("click", () => {
             threadContainer.style.display = "none";
         });
-        
-        
     }
+
 
     setMessageData(data) {
         const shadowRoot = this.shadowRoot;

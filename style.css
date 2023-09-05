@@ -646,6 +646,7 @@ span {
     border-radius: 0.5em;
     border: 0.5px solid var(--border-color);
     z-index: 9999;
+    transition:  all ease 2s;
 
 
 }
@@ -683,12 +684,13 @@ span {
 
 .three-dots {
     outline: none;
+
 }
 
-.three-dots:focus+.message-options {
+/* .three-dots:focus+.message-options {
     display: flex;
 
-}
+} */
 
 .message-options svg {
     cursor: pointer;
