@@ -299,8 +299,9 @@ height: 60vh;
 
     .container {
         margin: auto;
-       padding: 1.5em;
-        max-width: calc(100% - 3em);
+        padding-left: 1em;
+        padding-right: 1em;
+        max-width: calc(100% - 2em);
     }
 
     .img-box img {
