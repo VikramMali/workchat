@@ -93,6 +93,7 @@ img {
 .container {
     margin: auto;
     padding: 1.5em;
+    width: calc(100% - 3em);
     max-width: 1140px;
 
 }
@@ -113,8 +114,8 @@ img {
     max-width: calc(100% - 2em);
     margin-top: 10vh;
     border: 0.5px solid var(--border-color);
-    background-color: rgb(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    /* background-color: rgb(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); */
     /* box-shadow: var(--box-shadow); */
     border-radius: 1em;
     padding: 3em 2em;
