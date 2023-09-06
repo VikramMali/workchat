@@ -19,10 +19,7 @@
     --border-color: rgb(206, 206, 206);
     --box-shadow: 0 0 6px rgb(0, 0, 0, 0.5);
     --message-text-bg: rgba(158, 154, 159, 0.1);
-
-
 }
-
 
 .dark {
     --bg-color: #232627;
@@ -35,7 +32,6 @@
     --box-shadow: 0 0 6px rgb(255, 255, 255, 0.1);
     --message-text-bg: rgba(160, 159, 161, 0.1);
     transition: 0.3s;
-
 }
 
 body {
@@ -206,9 +202,6 @@ img {
     border-radius: 1em;
 }
 
-
-
-
 .img-box {
     width: 100%;
     padding: 2em;
@@ -217,7 +210,6 @@ img {
     align-items: center;
     gap: 2em;
     border-radius: 2em;
-
 }
 
 
