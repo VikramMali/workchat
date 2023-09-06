@@ -888,11 +888,9 @@ span {
 /* all pop ups */
 .dropdown-holder{
     position: relative;
-   
- 
 }
 .dropdown{
-   display: none;
+    display: none;
    position: absolute;
    top: 100%; /* Position it below the trigger */
    right: 0;
@@ -906,11 +904,7 @@ span {
    z-index: 99999;
  
 }
-.profile-popup{
-    width: 250px;
-    height: 250px;
-   
-}
+
 
 .dropdown-trigger:focus + .dropdown,
 .dropdown:hover {
