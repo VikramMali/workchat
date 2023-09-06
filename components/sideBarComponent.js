@@ -20,26 +20,78 @@ class SideBar extends HTMLElement {
         <div class="sidebar">
 
         <div class="content" style="  display: flex; flex-direction:column; ">
-            <div class="top" style="display: flex; justify-content:space-between; align-items:center;">
-                <div class="row">
-                    <div class="row yourslack" id="yourSlackButton" style="cursor: pointer;">
-                        <h4>Your worksetu</h4>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-chevron-down" viewBox="0 0 16 16">
+                <div class="top" style="display: flex; justify-content:space-between; align-items:center;">
+                    <div class="row dropdown-holder">
+                        <div class="row yourslack dropdown-trigger" tabindex="0" style="cursor: pointer;">
+                            <h4>Your worksetu</h4>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </div>
+                        <!-- you-slack popup -->
+                        <div class="your-slack popup dropdown-popup">
+                            <div class="column">
+                                <div class="row">
+                                    <img class="img" src="img/sender.png" alt=""
+                                        style=" width: 40px; height:40px; border-radius:0.5em; cursor:pointer;">
+                                    <div class="column" style="gap:2px">
+                                        <span style="font-size: 1em; font-weight:600;">Your worksetu</span>
+                                        <span>worksetu-tdq3097.slack.com</span>
+                                    </div>
+                                </div>
+                                <div class="mid-content">
+                                    <div class="column" style="border-bottom: 1px solid grey; padding:10px" ;>
+                                        <span class="invite" style="cursor: pointer;">Invite people to your
+                                            slack</span>
+                                        <span class="create-pop" style="cursor: pointer;">Create channel</span>
+                                    </div>
+                                    <div class="column" style="border-bottom: 1px solid grey; padding:10px " ;>
+                                        <span class="setting-and-admin" style="cursor: pointer;">Setting and
+                                            administration</span>
+
+                                    </div>
+                                    <div class="column" style="border-bottom: 1px solid grey; padding:10px" ;>
+                                        <span class="work-pop-up" style="cursor: pointer;">Add workspace</span>
+                                        <span class="switch-button" style="cursor: pointer;">Switch workspace</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button class="button" style="width: 10px; font-size:16px">Sign out</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="dropdown-holder">
+                        <svg class="dropdown-trigger" tabindex="0" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                            <path
+                                d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
                             <path fill-rule="evenodd"
-                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
                         </svg>
+                        <!-- workspace-detail popup-container -->
+                        <div class="workspace-detail popup-container dropdown-popup">
+                            <div class="column" style="gap:0.5em">
+                                <h2>Edit work space detail</h1>
+                                    <span>Workspace name</span>
+                                    <input class="input" type="text">
+                                    <span>URL</span>
+                                    <input class="input" type="text" placeholder="https://hi-tdq5698.slack.com">
+                                    <div class="row" style="width: 100%;">
+                                        <button
+                                            style=" width: 50%;background-color:var(--bg-color);color:var(--text-color); border:0.5px solid var(--primary-color)"
+                                            class="button" data-action="cancel">Cancel</button>
+                                        <button style="width: 50%; " class="button">Save</button>
+                                    </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <svg class="work-detail" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                    fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                    <path
-                        d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                    <path fill-rule="evenodd"
-                        d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
-                </svg>
             </div>
-        </div>
+
         <div class="column">
             <div class="row">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -149,39 +201,6 @@ class SideBar extends HTMLElement {
         </div>
     </div>
     </div>
-
-    <div class="your-slack popup" id="yourSlackPopup">
-        <div class="column">
-            <div class="row">
-                <img class="img" src="img/sender.png" alt=""
-                    style=" width: 40px; height:40px; border-radius:0.5em; cursor:pointer;">
-                <div class="column" style="gap:2px">
-                    <span style="font-size: 1em; font-weight:600;">Your Worksetu</span>
-                    <span>worksetu-tdq3097.slack.com</span>
-                </div>
-            </div>
-            <div class="mid-content">
-                <div class="column" style="border-bottom: 1px solid grey; padding:10px" ;>
-                    <span class="invite" style="cursor: pointer;">Invite people to your slack</span>
-                    <span class="create-pop" style="cursor: pointer;">Create channel</span>
-                </div>
-                <div class="column" style="border-bottom: 1px solid grey; padding:10px " ;>
-                    <span class="setting-and-admin" style="cursor: pointer;">Setting and administration</span>
-
-                </div>
-                <div class="column" style="border-bottom: 1px solid grey; padding:10px" ;>
-                    <span class="work-pop-up" style="cursor: pointer;">Add workspace</span>
-                    <span class="switch-button" style="cursor: pointer;">Switch workspace</span>
-                </div>
-            </div>
-            <div>
-                <button class="button" style="width: 10px; font-size:16px">Sign out</button>
-            </div>
-        </div>
-
-    </div>
-
-    
     
     `;
 
@@ -205,28 +224,11 @@ class SideBar extends HTMLElement {
     });
 
     // All pop up code here
-    this.yourSlackButton = shadowRoot.querySelector("#yourSlackButton");
-    this.yourSlackPopup = shadowRoot.querySelector("#yourSlackPopup");
     this.signOutButton = shadowRoot.querySelector(".button");
 
   }
 
 
-   
-  connectedCallback(){
-    this.yourSlackButton.addEventListener("click", () => {
-        this.yourSlackPopup.style.display = "block";
-      });
-  
-      document.addEventListener("click", (event) => {
-        if (!this.contains(event.target)) {
-          this.yourSlackPopup.style.display = "none";
-        }
-      });
-      this.signOutButton.addEventListener("click", () => {
-        this.yourSlackPopup.style.display = "none";
-      });
-  }
 }
 
 customElements.define("side-bar", SideBar);

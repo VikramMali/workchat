@@ -892,7 +892,7 @@ span {
  
 }
 .dropdown-popup{
-   display: none; /* Initially hide the popup */
+   display: none;
    position: absolute;
    top: 100%; /* Position it below the trigger */
    right: 0;
@@ -911,7 +911,8 @@ span {
     z-index: 99999;
 }
 
-.dropdown-trigger:focus + .dropdown-popup {
+.dropdown-trigger:focus + .dropdown-popup,
+.dropdown-popup:focus-within {
     display: block; /* Show the popup when trigger is focused */
 }
 
@@ -953,9 +954,7 @@ span {
     border-radius: 20px;
     box-shadow: var(--box-shadow);
     z-index: 9999;
-    display: none;
-    position: absolute;
-    top: 8%;
+    top: 100%;
     left: 0;
 
 }
