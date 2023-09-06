@@ -44,6 +44,11 @@ body {
     overflow-x: hidden;
 }
 
+::selection{
+    background-color:#7400f8;
+    color: #ffffff;
+}
+
 ::-webkit-scrollbar {
     width: 5px;
 }
