@@ -881,6 +881,7 @@ span {
 }
 
 .work-detail {
+    display: none;
     cursor: pointer;
 }
 
@@ -900,7 +901,6 @@ span {
    box-shadow: var(--box-shadow);
    z-index: 9999;
    top: 100%;
-   right: 0;
    z-index: 99999;
  
 }
@@ -908,7 +908,7 @@ span {
 
 .dropdown-trigger:focus + .dropdown,
 .dropdown:hover {
-    display: block; /* Show the popup when trigger is focused */
+    display: block; 
 }
 
 
@@ -918,66 +918,32 @@ span {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 2em;
     width: 400px;
-    height: 350px;
-    background-color: var(--bg-color);
-    box-shadow: var(--box-shadow);
     z-index: 9999;
-    border-radius: 20px;
 }
 
-
-.dimmed-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9998;
-    pointer-events: none;
-}
 
 /* your slack pop up style */
 
 .your-slack {
-    width: 300px;
-    height: 300px;
-    background-color: var(--bg-color);
-    padding: 2em;
-    border-radius: 20px;
-    box-shadow: var(--box-shadow);
+    display: none;
+    width: 280px;
     z-index: 9999;
     top: 100%;
     left: 0;
-
 }
-
 .mid-content span {
     font-size: 1em;
 }
-
-
-
-.invite-people {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-    width: 400px;
-    height: 250px;
-    padding: 2em;
-    background-color: var(--bg-color);
-    border-radius: 20px;
-    box-shadow: var(--box-shadow);
+.right{
+    left: 0;
 }
 
+.invite-people {display:none;
+    position: absolute;
+    width: 400px;
+    left: 0;
+}
 
 .invite-people textarea {
     padding: 1em;
@@ -989,119 +955,14 @@ span {
 .invite-people textarea:focus {
     outline: none;
     box-shadow: var(--box-shadow);
-
 }
-
-
 a {
     text-decoration: none;
-
-}
-
-.create-channel-popup {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-    width: 400px;
-    height: 250px;
-    padding: 2em;
-    background-color: var(--bg-color);
-    border-radius: 20px;
-    box-shadow: var(--box-shadow);
-}
-
-
-.setting-adminitration-popup {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    position: absolute;
-    left: 23.7%;
-    top: 22%;
-    display: none;
-    width: 250px;
-    height: 250px;
-    padding: 2em;
-    background-color: var(--bg-color);
-    border-radius: 20px;
-    box-shadow: var(--box-shadow);
-}
-
-.add-workspace-popup {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    position: absolute;
-    left: 23.7%;
-    top: 22%;
-    display: none;
-    width: 200px;
-    height: 125px;
-    padding: 1em;
-    background-color: var(--bg-color);
-    border-radius: 20px;
-    box-shadow: var(--box-shadow);
 }
 
 .edit-workspace-detail-popup {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     display: none;
     width: 400px;
-    height: 350px;
-    padding: 2em;
-    background-color: var(--bg-color);
-    border-radius: 20px;
-    box-shadow: var(--box-shadow);
-}
-
-.switch-workspace-popup {
-    display: flex;
-    justify-content: flex-start;
-    align-items: start;
-    z-index: 9999;
-    position: absolute;
-    left: 23.7%;
-    top: 21%;
-    display: none;
-    width: 200px;
-    height: 200px;
-    padding: 2em;
-    background-color: var(--bg-color);
-    border-radius: 20px;
-    box-shadow: var(--box-shadow);
-}
-
-.add-channel-pop-up {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-    width: 400px;
-    height: 250px;
-    padding: 2em;
-    background-color: var(--bg-color);
-    border-radius: 20px;
-    box-shadow: var(--box-shadow);
 }
 
 @media screen and (max-width: 768px) {

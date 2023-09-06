@@ -36,7 +36,7 @@ class NavBar extends HTMLElement {
                     <img class="dropdown-trigger" tabindex="0"  src="img/sender.png" alt="Me"
                         style=" width: 40px; height:40px; margin-right:2.5em; border-radius:0.5em; cursor:pointer;">
                     <!-- profile-popup -->
-                    <div class="profile-popup dropdown">
+                    <div class="profile-popup dropdown" style="width:250px">
                         <div class="column">
                             <div class="row">
                                 <img class="img" src="img/sender.png" alt="">
