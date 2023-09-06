@@ -31,7 +31,7 @@ class SideBar extends HTMLElement {
                             </svg>
                         </div>
                         <!-- you-slack popup -->
-                        <div class="your-slack popup dropdown-popup">
+                        <div class="your-slack popup dropdown">
                             <div class="column">
                                 <div class="row">
                                     <img class="img" src="img/sender.png" alt=""
@@ -73,7 +73,7 @@ class SideBar extends HTMLElement {
                                 d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
                         </svg>
                         <!-- workspace-detail popup-container -->
-                        <div class="workspace-detail popup-container dropdown-popup">
+                        <div class="workspace-detail popup-container dropdown">
                             <div class="column" style="gap:0.5em">
                                 <h2>Edit work space detail</h1>
                                     <span>Workspace name</span>
