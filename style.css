@@ -6,7 +6,6 @@
     font-display: swap;
 }
 
-
 :root {
     font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --primary-color: #7921de;
@@ -78,9 +77,7 @@ a {
 .input::placeholder {
     padding: 0.5em;
     color: #999999;
-    /* Placeholder text color */
     font-size: 0.9em;
-    /* Placeholder text style */
 }
 
 img {
