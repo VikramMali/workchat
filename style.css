@@ -884,6 +884,38 @@ span {
     cursor: pointer;
 }
 
+
+/* all pop ups */
+.dropdown-holder{
+    position: relative;
+   
+ 
+}
+.dropdown-popup{
+   display: none; /* Initially hide the popup */
+   position: absolute;
+   top: 100%; /* Position it below the trigger */
+   right: 0;
+ 
+}
+.profile-popup{
+    width: 250px;
+    height: 250px;
+    padding: 2em;
+    background-color: var(--bg-color);
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+    z-index: 9999;
+    top: 100%;
+    right: 0;
+    z-index: 99999;
+}
+
+.dropdown-trigger:focus + .dropdown-popup {
+    display: block; /* Show the popup when trigger is focused */
+}
+
+
 .popup-container {
     display: none;
     position: fixed;
@@ -932,22 +964,7 @@ span {
     font-size: 1em;
 }
 
-.profile-popup {
-   
-    width: 250px;
-    height: 250px;
-    padding: 2em;
-    background-color: var(--bg-color);
-    border-radius: 20px;
-    box-shadow: var(--box-shadow);
-    z-index: 9999;
-    position: absolute;
-    top: 4%;
-    right: 0;
-    z-index: 9999;
-    display: none;
 
-}
 
 .invite-people {
     display: flex;
