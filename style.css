@@ -13,9 +13,9 @@
     --text-color: #2d2d2d;
     --sub-text-color: #4c4a58;
     --bg-color: #ffffff;
-    --sidebar: #ffff;
+    --sidebar: rgba(158, 154, 159, 0.1);
     --message: rgb(255, 255, 255);
-    --nav: #fff;
+    --nav: rgba(158, 154, 159, 0.1);
     --border-color: rgb(206, 206, 206);
     --box-shadow: 0 0 6px rgb(0, 0, 0, 0.5);
     --message-text-bg: rgba(158, 154, 159, 0.1);
@@ -410,11 +410,12 @@ img {
 }
 
 .search {
-    background-color: var(--nav);
+    background-color: transparent;
     border: none;
     color: var(--text-color);
     outline: none;
     width: 100%;
+   
 
 }
 
@@ -422,7 +423,7 @@ img {
 
 .search::placeholder {
     font-size: 0.8em;
-    ;
+    
 }
 
 .row {
@@ -755,16 +756,12 @@ span {
 
 /* =========================Thread=================================== */
 .thread {
-
     padding: 1em;
     flex: 1;
     background-color: var(--bg-color);
     display: flex;
     flex-direction: column;
-    border-top: 0.05px solid var(--border-color);
-    border-right: 0.05px solid var(--border-color);
     display: none;
-
 }
 
 /* ===========================input box design============== */
@@ -774,9 +771,6 @@ span {
     /* padding: 0.5em; */
     flex-direction: column;
     position: relative;
-
-
-
     /* border: 0.05px solid var(--border-color); */
 
 }
@@ -789,8 +783,6 @@ span {
     border: 0.05px solid var(--border-color);
     border-radius: 0.5em;
     justify-content: space-between;
-
-
 }
 
 .chatbox-msg {
@@ -804,16 +796,12 @@ span {
     color: var(--text-color);
     font-size: 1.2em;
     outline: none;
-
 }
 
 .input-msg svg {
     width: 18px;
     height: 18px;
     cursor: pointer;
-
-
-
 }
 
 .textStyle-container {
@@ -1144,7 +1132,6 @@ input[type="number"]::-webkit-outer-spin-button {
     gap: 3em;
     padding: 2em;
     width: calc(100% - 4em);
-
 }
 
 .leftside {
