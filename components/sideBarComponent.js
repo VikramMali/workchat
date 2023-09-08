@@ -47,7 +47,7 @@ class SideBar extends HTMLElement {
                                     style="cursor: pointer;">Invite people to your
                                     slack</span>
                                 <!-- invite-pop-up -->
-                                <div class="invite-people dropdown">
+                                <div class="invite-people popup-container dropdown">
                                     <div class="column">
                                         <span style="font-size:1em; font-weight:600 ">Invite people</span>
                                         <span style="font-size:0.7em; font-weight:600 ">To:</span>
@@ -73,9 +73,7 @@ class SideBar extends HTMLElement {
                                 </div>
                                 <span class="create-pop dropdown-trigger" tabindex="0"
                                     style="cursor: pointer;">Create channel</span>
-                                <div class="create-channel-popup dropdown" style="position: absolute;
-                                width: 400px;
-                                left: 0;">
+                                <div class="create-channel-popup popup-container dropdown">
                                     <div class="column">
                                         <span style="font-size:1em; font-weight:600 ">Create channel</span>
                                         <span style="font-size:0.7em; font-weight:600 ">Name</span>

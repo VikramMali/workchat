@@ -869,7 +869,6 @@ span {
 }
 
 .work-detail {
-    display: none;
     cursor: pointer;
 }
 
@@ -883,7 +882,6 @@ span {
     display: none;
     position: absolute;
     top: 100%;
-    /* Position it below the trigger */
     right: 0;
     padding: 2em;
     background-color: var(--bg-color);
@@ -929,8 +927,6 @@ span {
 }
 
 .invite-people {
-    /* display: none; */
-
     width: 400px;
    
 }
@@ -952,7 +948,7 @@ a {
 }
 
 .edit-workspace-detail-popup {
-    display: none;
+   display: none;
     width: 400px;
 }
 
@@ -960,7 +956,6 @@ a {
    
     .popup-container{
         transform: translate(-25%, -50%);
-       
           width: 300px ;
           padding: 2em;
           font-size: 0.9em;
